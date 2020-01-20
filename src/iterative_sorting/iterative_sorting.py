@@ -3,7 +3,7 @@
 arr = [5, 4, 3, 1, 7, 2, 9]
 print('arr in:', arr)
 def selection_sort(arr):
-    for i in range(0, len(arr) - 1):
+    for i in range(len(arr) - 1):
         cur_index = i
         smallest_index = cur_index
         # print(smallest_index)
@@ -13,24 +13,45 @@ def selection_sort(arr):
                 smallest_index = x
                 # print(smallest_index)
         arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
-    print('ordered arr:', arr)
-
-        # UPER
-        # UNDERSTAND
-        # GOAL - PUT ARR IN ORDER
-        # TAKE
-
-
-
-
-
+    # print('ordered arr:', arr)
     return arr
+
+# selection_sort(arr)
 
 
 # TO-DO:  implement the Bubble Sort function below
-def bubble_sort( arr ):
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for x in range(n-i-1):
+            if arr[x] > arr[x+1]:
+                arr[x], arr[x + 1] = arr[x + 1], arr[x]
 
+    # print('bubble arr:', arr)
     return arr
+
+# bubble_sort(arr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # STRETCH: implement the Count Sort function below
@@ -38,7 +59,7 @@ def count_sort( arr, maximum=-1 ):
 
     return arr
 
-selection_sort(arr)
+
 
 # print(smallest_index)
 # # TO-DO: find next smallest element
