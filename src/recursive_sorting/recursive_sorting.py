@@ -14,24 +14,30 @@ def merge(arrA, arrB):
     # FOR EACH ITEM
 
     for i in arrA:
-        print('i:', i)
+        # print('i:', i)
         merged_arr[i-1] = i
     for x in arrB:
-        print('x', x)
+        # print('x', x)
         merged_arr[x - 1] = x
 
-    print('merged_arr:', merged_arr)
+    # print('merged_arr:', merged_arr)
     merged_arr.remove(1)
     return merged_arr
 
 merge(arrA, arrB)
 
+arr = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
+
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( arr ):
-    # TO-DO
+    for i in arr:
+        while i > 0:
+            print(i)
+
 
     return arr
 
+# merge_sort(arr)
 
 # STRETCH: implement an in-place merge sort algorithm
 def merge_in_place(arr, start, mid, end):
