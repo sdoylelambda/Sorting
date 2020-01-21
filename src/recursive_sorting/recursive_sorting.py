@@ -1,25 +1,27 @@
 # TO-DO: complete the helper function below to merge 2 sorted arrays
 
 arrA = [1, 2, 3]
-arrB = [3, 4, 5]
+arrB = [4, 5, 6]
 
 def merge(arrA, arrB):
     elements = len(arrA) + len(arrB)
-    print('elements:', elements)
+    # print('elements:', elements)
     merged_arr = [0] * elements
     # UPER
     # U - UNDERSTAND
     # TAKE 2 ORDERED LISTS AND MERGE THEM TOGETHER
     # P - PLAN
     # FOR EACH ITEM
-    for x in arrB:
-        print('x', x)
-        merged_arr[x] = x
+
     for i in arrA:
         print('i:', i)
-        merged_arr[i] = i
+        merged_arr[i-1] = i
+    for x in arrB:
+        print('x', x)
+        merged_arr[x - 1] = x
 
     print('merged_arr:', merged_arr)
+    merged_arr.remove(1)
     return merged_arr
 
 merge(arrA, arrB)
