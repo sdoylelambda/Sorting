@@ -12,6 +12,13 @@ def merge(arrA, arrB):
     # TAKE 2 ORDERED LISTS AND MERGE THEM TOGETHER
     # P - PLAN
     # FOR EACH ITEM
+    for x in arrB:
+        print('x', x)
+        merged_arr[x] = x
+    for i in arrA:
+        print('i:', i)
+        merged_arr[i] = i
+
     print('merged_arr:', merged_arr)
     return merged_arr
 
