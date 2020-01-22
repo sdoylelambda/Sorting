@@ -15,7 +15,7 @@ def selection_sort(arr):
     print('arr out:', arr)
     return arr
 
-selection_sort(arr)
+# selection_sort(arr)
 
 
 def selection_sort2(arr):
@@ -31,7 +31,7 @@ def selection_sort2(arr):
     print('arr2 out:', arr)
     return arr
 
-selection_sort2(arr)
+# selection_sort2(arr)
 
 
 # Compares 1st to 2nd, 2nd to third and so on
@@ -56,7 +56,7 @@ def bubbleSort(arr):
     print('arrbubble', arr)
     return arr
 
-bubbleSort(arr)
+# bubbleSort(arr)
 
 def oneAtATime(arr):
     x = len(arr)
@@ -67,4 +67,46 @@ def oneAtATime(arr):
     print('1atatime', arr)
     return arr
 
-oneAtATime(arr)
+# oneAtATime(arr)
+
+arrA = [1, 2, 3]
+arrB = [4, 5, 6]
+
+def merge(arrA, arrB):
+    elements = len(arrA) + len(arrB)
+    # print('elements:', elements)
+    merged_arr = [0] * elements
+    # UPER
+    # U - UNDERSTAND
+    # TAKE 2 ORDERED LISTS AND MERGE THEM TOGETHER
+    # P - PLAN
+    # FOR EACH ITEM
+
+    for i in arrA:
+        # print('i:', i)
+        merged_arr[i-1] = i
+    for x in arrB:
+        # print('x', x)
+        merged_arr[x - 1] = x
+
+    print('merged_arr:', merged_arr)
+    merged_arr.remove(1)
+    return merged_arr
+
+merge(arrA, arrB)
+
+arr = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
+
+# TO-DO: implement the Merge Sort function below USING RECURSION -- broken
+# def merge_sort( arr ):
+#     if len(arr) > 1:
+#         middle = len(arr) // 2
+#         first_half = arr[0:middle]
+#         second_half = arr[middle:]
+#         left = merge_sort(first_half)
+#         right = merge_sort(second_half)
+#         arr = merge(left, right)
+#         print('merged sorted', arr)
+#         return arr
+#
+# merge_sort(arr)
